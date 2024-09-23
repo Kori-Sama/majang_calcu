@@ -200,6 +200,13 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.15.0"
+  native_cv:
+    dependency: "direct main"
+    description:
+      path: native_cv
+      relative: true
+    source: path
+    version: "0.0.1"
   path:
     dependency: "direct main"
     description:
