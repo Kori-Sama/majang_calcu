@@ -1,7 +1,12 @@
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
+import 'package:majang_calcu/components/camera_controller.dart';
+import 'package:native_cv/native_cv.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  final NativeCv _nativeCv = NativeCv();
+  final CameraDescription camera;
+  HomePage({super.key, required this.camera});
 
   @override
   Widget build(BuildContext context) {
@@ -13,12 +18,11 @@ class HomePage extends StatelessWidget {
         centerTitle: true,
       ),
       body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            // Shot a picture
-          },
-          child: const Text('Shot'),
-        ),
+        child: TakePictureScreen(camera: camera),
+      ),
+      bottomSheet: Text(
+        'OpenCV Version: ${_nativeCv.getOpenCvVersion()}',
+        textAlign: TextAlign.center,
       ),
     );
   }
