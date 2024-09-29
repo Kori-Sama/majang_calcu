@@ -1,6 +1,6 @@
 # native_cv
 
-A new Flutter plugin project.
+A new Flutter plugin project for majang recognition.
 
 ## Getting Started
 
